@@ -41,3 +41,76 @@ console.log(testStrict(7));
 
 //equality operator (==) does type conversion
 //strict equality operator (===) does not do type conversion
+
+//---Inequality Operator---
+
+function testNotEqual(val) {
+  if (val != 99) {
+    return "Not Equal";
+    //checks if the value is not equal to 99
+    //performs type conversion
+  }
+  return "Equal";
+}
+console.log("Testing inequality with != :");
+console.log(testNotEqual(10));
+
+function testStrictNotEqual(val) {
+  if (val !== 30) {
+    return "Not Equal";
+    //checks if the value is not equal to 30
+    //performs type conversion
+  }
+  return "Equal";
+}
+console.log("Testing strict inequality with !== :");
+console.log(testStrictNotEqual(10));
+console.log(testStrictNotEqual(30));
+console.log(testStrictNotEqual("30"));
+
+//---Comparison with the Logical and Operator---
+
+function greaterThan(val){
+  if (val > 100){
+    return "Over 100";
+  }
+  if (val < 10){
+    return "Under 10";
+  }
+
+}
+
+console.log("Testing greater Than and Less Than function:");
+console.log(greaterThan(150));
+console.log(greaterThan(5));
+
+//---Comparison with the Greater/Less Than Or Equal To Operator---
+
+function greaterThanOrEqualTo(val){
+  if (val >= 20){
+    return "20 or Over";
+  }
+  if (val <= 10){
+    return "10 or Under";
+  }
+}
+
+console.log("Testing greater Than and Less Than or Equal To function:");
+console.log(greaterThanOrEqualTo(25));
+console.log(greaterThanOrEqualTo(9));
+
+//Logial and operator (&&) Logical or operator (||)
+
+function LogicalOperators(val){
+  if (val <= 10 && val >= 5){
+    return "Yes";
+  }
+  if (val <= 20 || val >= 25){
+    return "Maybe";
+  }
+  return "No";
+}
+
+console.log("Testing Logical Operators function:");
+console.log(LogicalOperators(7));
+console.log(LogicalOperators(17));
